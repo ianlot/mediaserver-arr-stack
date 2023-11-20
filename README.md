@@ -5,9 +5,9 @@ Jackett, Radarr, Sonarr, Overseerr, Tautulli.
 ## Usage
 ### 1. Install Docker
 `curl -sSL https://get.docker.com/ | CHANNEL=stable bash`
----
+
 If you do not have curl installed, then first install it: `apt install curl`
----
+
 ### 2. Install portainer (not required)
 `docker volume create portainer_data`
 
