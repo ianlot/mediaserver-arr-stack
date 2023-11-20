@@ -1,0 +1,71 @@
+version: '3'
+services:
+ radarr:
+  container_name: radarr
+  restart: unless-stopped
+  ports:
+   - 7878:7878
+  volumes:
+    - <\path to data>:/config
+    - <\path/to/movies>:/movies
+    - <\path/to/downloadclient-downloads>:/downloads
+  environment:
+   - PUID=1000
+   - PGID=1000
+   - TZ=America/New_York
+  image: lscr.io/linuxserver/radarr
+ 
+ sonarr:
+  container_name: sonarr
+  restart: unless-stopped
+  ports:
+   - 8989:8989
+  volumes:
+    - <\path to data>:/config
+    - <\path/to/tv>:/tv
+    - <\path/to/downloadclient-downloads>:/downloads
+  environment:
+   - PUID=1000
+   - PGID=1000
+   - TZ=America/New_York
+  image: lscr.io/linuxserver/sonarr
+ 
+ jackett:
+  container_name: jackett
+  restart: unless-stopped
+  ports:
+   - 9117:9117
+  volumes:
+   - <\path to data>:/config
+  environment:
+   - PUID=1000
+   - PGID=1000
+   - TZ=America/New_York
+  image: lscr.io/linuxserver/jackett
+
+ overseerr:
+  container_name: overseerr
+  restart: unless-stopped
+  ports:
+   - 5055:5055
+  volumes:
+   - <\path to data>:/config
+  environment:
+   - PUID=1000
+   - PGID=1000
+   - TZ=America/New_York
+  image: sctx/overseerr
+
+ tautulli:
+  container_name: tautulli
+  restart: unless-stopped
+  ports:
+   - 8181:8181
+  volumes:
+   - <\path to data>:/config
+  environment:
+   - PUID=1000
+   - PGID=1000
+   - TZ=America/New_York
+  image: ghcr.io/tautulli/tautulli
+
