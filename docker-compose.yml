@@ -49,7 +49,7 @@ services:
   ports:
    - 5055:5055
   volumes:
-   - <\path to data>:/config
+   - <\path to data>:/app/config
   environment:
    - PUID=1000
    - PGID=1000
