@@ -34,3 +34,8 @@ Replace the directories in the docker-compose.yml
 ### 5. Deploy your edited docker-compose.yml
 Have fun! :)
 
+### If Jackett can't connect to Torrent Trackers because of SSL error:
+Change your nameservers in:
+`/etc/resolv.conf`
+to 9.9.9.9 and 1.1.1.1
+
