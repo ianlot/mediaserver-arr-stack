@@ -37,7 +37,7 @@ You will need to replace PUID and PGID in docker-compose.yml with the mediaserve
 ### 3. Create directories
 Create directories for config files (diffierent directory for jackett, radarr, sonarr, overseerr, tautulli).
 
-### 4. Create directories
+### 4. Replace directories in docker-compose
 Replace the directories in the docker-compose.yml
 
 ### 5. Deploy your edited docker-compose.yml
