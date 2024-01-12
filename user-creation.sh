@@ -16,14 +16,15 @@ folders=("jackett" "radarr" "sonarr" "tautulli" "overseerr")
 
 for folder in "${folders[@]}"; do
     folder_path="$base_dir/$folder"
-    
+    config_path="$folder_path/config"
+
     # checking if the folder exist
     if [ -d "$folder_path" ]; then
         echo "The $folder directory already exist."
     else
-        mkdir "$folder_path"
-        chown -R $username:$username "$folder_path"
-        echo "The $folder folder created."
+        mkdir -p "$config_path"
+        chown -R $username:$username "$config_path"
+        echo "The $folder/config folder created."
     fi
 done
 
