@@ -14,12 +14,19 @@ If you do not have curl installed, then first install it: `apt install curl`
 `docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest`
 
 ### 3. Create user and group
-
+1st method:  
 ```
 adduser mediaserver
 addgroup dockergroup
 usermod -a -G dockergroup mediaserver
+```  
+OR    
+You can use the user-creation.sh script to create user and directories.  
+Just give permission to script and run it:  
 ```
+sudo chmod +x user-creation.sh
+sudo ./user-creation.sh
+```  
 Check the user ID and group ID with the command:
 `id mediaserver`
 
