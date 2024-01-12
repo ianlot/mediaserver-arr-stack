@@ -20,13 +20,15 @@ adduser mediaserver
 addgroup dockergroup
 usermod -a -G dockergroup mediaserver
 ```  
-OR    
+OR  
+2nd method:     
 You can use the user-creation.sh script to create user and directories.  
 Just give permission to script and run it:  
 ```
 sudo chmod +x user-creation.sh
 sudo ./user-creation.sh
-```  
+``` 
+   
 Check the user ID and group ID with the command:
 `id mediaserver`
 
